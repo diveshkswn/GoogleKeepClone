@@ -1,4 +1,8 @@
-#GoogleKeep Clone
+# GoogleKeep Clone
+
+This is a Clone Web App of Google Keep build using React JS
+
+To run to run this app in local env please refer below steps : 
 
 
 
