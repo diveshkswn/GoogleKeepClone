@@ -1,14 +1,15 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable react/prop-types */
+/* eslint-disable linebreak-style */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable linebreak-style */
 import React from 'react';
 
-const noteHeading = 'This is heading';
-const noteContent = 'This is note content';
-
-function Note() {
+function Note(props) {
   return (
     <div className="note">
-      <h1>{noteHeading}</h1>
-      <p>{noteContent}</p>
+      <h1>{props.heading}</h1>
+      <p>{props.content}</p>
     </div>
   );
 }
