@@ -21,7 +21,6 @@ function App() {
       <Header />
       {noteList.map(getNotes)}
       <Footer />
-
     </div>
   );
 }
