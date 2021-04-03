@@ -8,7 +8,6 @@ import Note from './Note';
 import CreateArea from './CreateArea';
 
 function getNotes(noteEntry, index) {
-  console.log(index);
   return (
     <Note
       key={index}
@@ -50,6 +49,7 @@ function App() {
         handleAddSubmit={handleAddSubmit}
       />
       {itemList.map(getNotes)}
+
       <Footer />
     </div>
   );
