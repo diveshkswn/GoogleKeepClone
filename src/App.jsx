@@ -2,6 +2,7 @@
 /* eslint-disable no-console */
 /* eslint-disable linebreak-style */
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Header from './Header';
 import Footer from './Footer';
 import Note from './Note';
@@ -36,13 +37,20 @@ function App() {
 
   function getNotes(noteEntry, index) {
     return (
-      <Note
-        key={index}
-        id={index}
-        title={noteEntry.title}
-        content={noteEntry.content}
-        handleDelete={handleDelete}
-      />
+
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: 'spring', duration: 0.5 }}
+      >
+        <Note
+          key={index}
+          id={index}
+          title={noteEntry.title}
+          content={noteEntry.content}
+          handleDelete={handleDelete}
+        />
+      </motion.div>
     );
   }
   //
