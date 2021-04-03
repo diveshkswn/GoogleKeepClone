@@ -1,6 +1,15 @@
 # GoogleKeep Clone
 
 This is a Clone Web App of Google Keep build using React JS
+Main Technologies used :
+1 . React Functional Components 
+2 . React Hooks (useState) 
+3. Framer Motion (React Animation) 
+4. 4 . Material Icon for React 
+5. 5. Netlify (Deployment) 
+6. Github link : https://github.com/diveshkswn/GoogleKeepClone
+7. Website live : https://keep-clone-google.netlify.app/
+
 
 To run to run this app in local env please refer below steps : 
 
