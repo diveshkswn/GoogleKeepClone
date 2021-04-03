@@ -7,17 +7,6 @@ import Footer from './Footer';
 import Note from './Note';
 import CreateArea from './CreateArea';
 
-function getNotes(noteEntry, index) {
-  return (
-    <Note
-      key={index}
-      id={index}
-      title={noteEntry.title}
-      content={noteEntry.content}
-    />
-  );
-}
-
 function App() {
   const [item, setItem] = useState({
     title: '',
@@ -38,6 +27,23 @@ function App() {
       content: '',
     });
     e.preventDefault();
+  }
+
+  function handleDelete(event) {
+    console.log(event);
+    setitemList((oldVal) => oldVal.filter((val, index) => index !== event));
+  }
+
+  function getNotes(noteEntry, index) {
+    return (
+      <Note
+        key={index}
+        id={index}
+        title={noteEntry.title}
+        content={noteEntry.content}
+        handleDelete={handleDelete}
+      />
+    );
   }
 
   return (

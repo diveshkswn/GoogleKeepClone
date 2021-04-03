@@ -11,7 +11,7 @@ function Note(props) {
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      <button type="button">DELETE</button>
+      <button onClick={() => { props.handleDelete(props.id); }} type="button">DELETE</button>
     </div>
   );
 }
