@@ -1,16 +1,19 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-console */
+/* eslint-disable linebreak-style */
 import React, { useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Note from './Note';
-import noteList from './notes';
 import CreateArea from './CreateArea';
 
-function getNotes(noteEntry) {
+function getNotes(noteEntry, index) {
+  console.log(index);
   return (
     <Note
-      key={noteEntry.key}
-      heading={noteEntry.title}
+      key={index}
+      id={index}
+      title={noteEntry.title}
       content={noteEntry.content}
     />
   );
@@ -22,17 +25,31 @@ function App() {
     content: '',
   });
 
-  function addItem() {
+  const [itemList, setitemList] = useState([]);
 
+  function addItem(event) {
+    const { name, value } = event.target;
+    setItem((oldVal) => ({ ...oldVal, [name]: value }));
+  }
+
+  function handleAddSubmit(e) {
+    setitemList((oldVal) => [...oldVal, item]);
+    setItem({
+      title: '',
+      content: '',
+    });
+    e.preventDefault();
   }
 
   return (
     <div>
       <Header />
       <CreateArea
+        item={item}
         addItem={addItem}
+        handleAddSubmit={handleAddSubmit}
       />
-      {noteList.map(getNotes)}
+      {itemList.map(getNotes)}
       <Footer />
     </div>
   );
