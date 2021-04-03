@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
 
-const headingName = 'Keeper App';
+const headingName = 'Keep Clone';
 
 function Headers() {
   return (
