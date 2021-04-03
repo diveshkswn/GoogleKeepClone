@@ -4,6 +4,7 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable linebreak-style */
 import React from 'react';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
 function Note(props) {
   return (
@@ -11,7 +12,9 @@ function Note(props) {
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      <button onClick={() => { props.handleDelete(props.id); }} type="button">DELETE</button>
+      <button onClick={() => { props.handleDelete(props.id); }} type="button">
+        <DeleteForeverIcon />
+      </button>
     </div>
   );
 }
